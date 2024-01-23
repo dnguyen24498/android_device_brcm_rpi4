@@ -15,9 +15,6 @@ dtparam=krnbt=on
 camera_auto_detect=1
 start_x=1
 
-# CPU
-arm_boost=1
-
 # Display
 disable_overscan=1
 
@@ -26,9 +23,8 @@ disable_overscan=1
 #dtoverlay=rpi-backlight
 
 # Graphics acceleration
-disable_fw_kms_setup=1
-dtoverlay=vc4-kms-v3d
-dtoverlay=cma,cma-512
+dtoverlay=vc4-kms-v3d-pi4
+#dtoverlay=cma,cma-512
 
 # I2C
 #dtparam=i2c_arm=on
@@ -47,3 +43,12 @@ dtoverlay=dwc2,dr_mode=peripheral
 [cm4]
 dtoverlay=dwc2,dr_mode=otg
 [all]
+
+# V4L2
+dtoverlay=rpivid-v4l2
+
+# Setting Waveshare display
+hdmi_group=2
+hdmi_mode=87
+hdmi_cvt 1024 600 60 6 0 0 0
+hdmi_drive=1
