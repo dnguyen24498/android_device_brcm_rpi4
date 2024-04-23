@@ -5,7 +5,7 @@
 #
 
 DEVICE_PATH := device/brcm/rpi4
-KERNEL_PATH := ~/auto-os/kernel/out/dist
+KERNEL_PATH := ~/auto-os/android-kernel/out/dist
 VENDOR_PATH := vendor/brcm
 
 RPI_BOOT_OUT := $(PRODUCT_OUT)/rpiboot
